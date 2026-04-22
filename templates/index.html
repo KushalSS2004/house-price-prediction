@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0 15px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #4facfe;
+            box-shadow: 0 0 5px #4facfe;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(to right, #43e97b, #38f9d7);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(to right, #38f9d7, #43e97b);
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .graphs {
+            margin-top: 30px;
+        }
+
+        .graphs img {
+            width: 70%;
+            border-radius: 10px;
+            margin-top: 10px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="title">🏠 AI House Price Predictor</div>
+
+<div class="container">
+
+    <h2>Enter House Details</h2>
+
+    <form action="/predict" method="post">
+
+        <label>Area (sq ft)</label><br>
+        <input type="text" name="Area" required>
+
+        <label>Bedrooms</label><br>
+        <input type="text" name="Bedrooms" required>
+
+        <label>Bathrooms</label><br>
+        <input type="text" name="Bathrooms" required>
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            💰 {{ prediction }}
+        </div>
+    {% endif %}
+
+</div>
+
+<div class="graphs">
+
+    {% if graph1 %}
+        <h3>📊 Actual vs Predicted</h3>
+        <img src="{{ graph1 }}">
+    {% endif %}
+
+    {% if graph2 %}
+        <h3>📉 Error Distribution</h3>
+        <img src="{{ graph2 }}">
+    {% endif %}
+
+</div>
+
+</body>
+</html>
