@@ -1,130 +1,138 @@
-# 🏠 House Price Prediction System
+# House Price Prediction System
 
-## 📌 Project Overview
+## Project Overview
 
-The House Price Prediction System is a machine learning–based web application that predicts house prices based on key features such as area, number of bedrooms, and bathrooms. The system uses a **Random Forest Regression** model trained on housing data and is deployed using a **Flask web framework** with an interactive user interface.
-
----
-
-## 🚀 Features
-
-* 📊 Predict house prices in real-time
-* 🧠 Machine Learning model (Random Forest)
-* 🌐 Flask-based web application
-* 📈 Visualization graphs (Actual vs Predicted, Error Distribution)
-* 🎯 User-friendly interface
+The House Price Prediction System is a machine learning-based web application that predicts house prices using key property features such as area, number of bedrooms, and number of bathrooms. The application uses a **Random Forest Regression** model trained on housing data and is deployed using the **Flask** web framework with a simple and interactive web interface.
 
 ---
 
-## 🛠️ Tech Stack
+## Features
 
-* **Programming:** Python
-* **Machine Learning:** Scikit-learn
-* **Data Processing:** Pandas, NumPy
-* **Visualization:** Matplotlib
-* **Backend:** Flask
-* **Frontend:** HTML, CSS
-* **Model Storage:** Pickle
+* Predict house prices in real time
+* Random Forest Regression model for accurate predictions
+* Flask-based web application
+* Data visualization for model performance analysis
+* User-friendly interface
 
 ---
 
-## 📂 Project Structure
+## Technology Stack
 
-```
+| Category             | Technologies  |
+| -------------------- | ------------- |
+| Programming Language | Python        |
+| Machine Learning     | Scikit-learn  |
+| Data Processing      | Pandas, NumPy |
+| Data Visualization   | Matplotlib    |
+| Backend              | Flask         |
+| Frontend             | HTML, CSS     |
+| Model Serialization  | Pickle        |
+
+---
+
+## Project Structure
+
+```text
 house_price_pred/
 │
-├── train_model.py        # Model training & evaluation
-├── app.py                # Flask web app
-├── model.pkl             # Trained model
+├── train_model.py        # Model training and evaluation
+├── app.py                # Flask application
+├── model.pkl             # Trained machine learning model
 ├── columns.pkl           # Feature columns
 │
-├── static/               # Saved graphs
+├── static/
 │   ├── graph1.png
 │   └── graph2.png
 │
 ├── templates/
-│   └── index.html        # UI page
+│   └── index.html        # Web interface
 │
-└── dataset.csv           # Dataset
+└── dataset.csv           # Housing dataset
 ```
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation and Setup
 
-### 1️⃣ Clone the repository
+### 1. Clone the Repository
 
-```
+```bash
 git clone https://github.com/your-username/house-price-prediction.git
 cd house-price-prediction
 ```
 
-### 2️⃣ Install dependencies
+### 2. Install Dependencies
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Train the model
+### 3. Train the Model
 
-```
+```bash
 python train_model.py
 ```
 
-### 4️⃣ Run the application
+### 4. Run the Application
 
-```
+```bash
 python app.py
 ```
 
-### 5️⃣ Open in browser
+### 5. Access the Application
 
-```
+Open your browser and navigate to:
+
+```text
 http://127.0.0.1:5000
 ```
 
 ---
 
-## 📊 Model Evaluation
+## Model Evaluation
 
-The model is evaluated using:
+The model performance is evaluated using the following metrics:
 
-* **MAE (Mean Absolute Error)**
-* **RMSE (Root Mean Squared Error)**
-* **R² Score**
+* Mean Absolute Error (MAE)
+* Root Mean Squared Error (RMSE)
+* R² Score
 
 ---
 
-## 📈 Visualizations
+## Visualizations
 
-* Actual vs Predicted Prices
+The application generates the following visualizations:
+
+* Actual vs. Predicted House Prices
 * Error Distribution
-* Feature Importance
+* Feature Importance Analysis
 
 ---
 
-## 💡 Future Improvements
+## Future Enhancements
 
-* Add more features (location, amenities, etc.)
-* Use advanced models like XGBoost
-* Deploy on cloud (AWS / Render / Heroku)
-* Add interactive charts (Plotly)
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to fork the repo and submit a pull request.
+* Incorporate additional features such as location, age of property, and nearby amenities
+* Experiment with advanced algorithms such as XGBoost and LightGBM
+* Deploy the application on cloud platforms such as AWS, Render, or Azure
+* Add interactive visualizations using Plotly
+* Improve the user interface with responsive design
 
 ---
 
-## 📜 License
+## Contributing
 
-This project is open-source and available under the MIT License.
+Contributions are welcome. If you would like to improve this project, feel free to fork the repository, create a feature branch, and submit a pull request.
 
 ---
 
-## 👨‍💻 Author
+## License
 
-**Kushal SS**
+This project is licensed under the MIT License.
+
+---
+
+## Author
+
+**Kushal Shiddibhavi**
+
 GitHub: https://github.com/KushalSS2004
